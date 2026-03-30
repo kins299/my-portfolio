@@ -3,166 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goutham Sekhar — Startup Systems Architect</title>
+<title>Goutham Sekhar — Tech Advisor</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Syne:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Syne:wght@400;600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --navy:#0b1628;
-  --gold:#c9a84c;
-  --cream:#faf7f0;
-  --muted:#8fa0c2;
+:root {
+  --navy: #0b1628;
+  --gold: #c9a84c;
+  --gold-light: #e2c97e;
+  --cream: #faf7f0;
 }
-body{
-  margin:0;
-  background:var(--navy);
-  color:var(--cream);
-  font-family:'DM Sans',sans-serif;
+
+body {
+  margin: 0;
+  background: var(--navy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'DM Sans', sans-serif;
 }
-nav{
-  position:fixed;
-  right:0;
-  padding:25px 60px;
+
+/* Profile Container */
+.profile-wrap {
+  position: relative;
+  width: 340px;
+  height: 340px;
 }
-nav a{
-  color:var(--muted);
-  text-decoration:none;
-  margin-left:25px;
-  font-size:12px;
-  letter-spacing:2px;
+
+/* Circular Frame */
+.profile-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(201,168,76,0.35);
+  position: relative;
 }
-.nav-btn{
-  background:var(--gold);
-  color:#000;
-  padding:10px 18px;
+
+/* Glow Effect */
+.profile-circle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(201,168,76,0.15);
+  pointer-events: none;
 }
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding:0 60px;
-}
-.hero-content{
-  display:flex;
-  align-items:center;
-  gap:60px;
-  flex-wrap:wrap;
-}
-.hero h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:60px;
-  font-weight:300;
-}
-.hero em{ color:var(--gold); }
-.hero p{
-  max-width:500px;
-  color:var(--muted);
-  line-height:1.8;
-}
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 28px;
-  background:var(--gold);
-  color:#000;
-  text-decoration:none;
-  font-size:12px;
-  letter-spacing:2px;
-}
-.profile-img{
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  object-fit:cover;
-  object-position:center top;
-  border:3px solid rgba(201,168,76,0.4);
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
-}
-.proof{
-  display:flex;
-  gap:40px;
-  padding:30px 60px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-}
-section{ padding:80px 60px; }
-h2{
-  font-family:'Cormorant Garamond',serif;
-  font-weight:300;
-  font-size:38px;
-}
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.card{
-  border:1px solid rgba(255,255,255,0.1);
-  padding:30px;
-}
-.case{ margin-bottom:30px; }
-.calendar{
-  margin-top:40px;
-  border:1px solid rgba(255,255,255,0.1);
-}
-@media(max-width:768px){
-  .hero h1{font-size:36px;}
-  .services{grid-template-columns:1fr;}
-  .proof{flex-direction:column;}
-  .profile-img{width:220px;height:220px;}
+
+/* Image Styling */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: contrast(1.08) brightness(1.02);
+  display: block;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#work">Work</a>
-  <a href="#services">Services</a>
-  <a href="#contact" class="nav-btn">Book a Call</a>
-</nav>
-
-<section class="hero">
-  <div class="hero-content">
-
-    <div>
-      <h1>
-        I build <em>scalable tech systems</em><br>
-        for startups ready to grow
-      </h1>
-
-      <p>
-        I work with founders to design, build, and optimize high-performance products — from MVP to scale.
-      </p>
-
-      <a href="#contact" class="btn">Book a Call</a>
-    </div>
-
-    <div>
-      <img src="profile.jpg" alt="Goutham Sekhar" class="profile-img">
-    </div>
-
+<div class="profile-wrap">
+  <div class="profile-circle">
+    <img src="profile.jpg.png" class="profile-img" alt="Goutham Sekhar">
   </div>
-</section>
-
-<div class="proof">
-  <div>Startup Products Built & Scaled</div>
-  <div>SaaS · Fintech · Platforms</div>
-  <div>Performance & Architecture Focus</div>
 </div>
-
-<section id="contact">
-  <h2>Let’s build something that scales</h2>
-
-  <a href="https://cal.id/goutham.s/connect" target="_blank" class="btn">
-    Book a Call
-  </a>
-
-  <div class="calendar">
-    <iframe src="https://cal.id/goutham.s/connect" width="100%" height="600"></iframe>
-  </div>
-</section>
 
 </body>
 </html>
